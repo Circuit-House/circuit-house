@@ -11765,7 +11765,7 @@ body {
     font-size: 2.5rem;
     line-height: 2.5rem;
     letter-spacing: 0.8rem;
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -11773,8 +11773,8 @@ body {
 
 .masthead h2,
 .masthead .h2 {
-    max-width: 20rem;
-    font-size: 1rem;
+    max-width: 30rem;
+    font-size: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -11799,7 +11799,7 @@ body {
     .masthead h2,
     .masthead .h2 {
         max-width: 30rem;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -11879,7 +11879,7 @@ body {
 
 .contact-section .card hr {
     opacity: 1;
-    border-color: #64a19d;
+    border-color: #FFFF;
     border-width: 0.25rem;
     width: 3rem;
 }
@@ -11895,7 +11895,7 @@ body {
     background: rgba(255, 255, 255);
     border-radius: 100%;
     line-height: 5rem;
-    color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .contact-section .social a:hover {
