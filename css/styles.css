@@ -11909,3 +11909,43 @@ body {
 .footer {
     padding: 5rem 0;
 }
+
+body, h1, h3 {
+    font-family: 'Nunito', sans-serif;
+}
+
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+section {
+    margin: 0;
+    padding: 0;
+}
+
+#vision
+{
+    padding: 50px 0; /* Adjust padding as needed to remove the gap */
+}
+
+#who-we-are {
+    padding: 250px 0; /* Adjust padding as needed to remove the gap */
+}
+
+#what-we-are-building {
+    padding: 250px 0; /* Adjust padding as needed to remove the gap */
+}
+
+#hiring {
+    padding: 250px 0; /* Adjust padding as needed to remove the gap */
+}
+
+hr {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.text-center {
+    text-align: center;
+}
