@@ -106,19 +106,6 @@
     src: url("../assets/font/PPNeueMachina-PlainRegular.otf")
 }
 
-body {
-    margin: 0;
-    font-family: var(--bs-body-font-family);
-    font-size: var(--bs-body-font-size);
-    font-weight: var(--bs-body-font-weight);
-    line-height: var(--bs-body-line-height);
-    color: var(--bs-body-color);
-    text-align: var(--bs-body-text-align);
-    background-color: var(--bs-body-bg);
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
 hr {
     margin: 1rem 0;
     color: inherit;
@@ -156,7 +143,12 @@ h1,
         font-size: 2.5rem;
     }
 }
-
+.section-head {
+        font-size: calc(1.375rem + 1.5vw);
+}
+.section-body {
+    font-size: calc(1.3rem + 0.6vw);
+}
 h2,
 .h2 {
     font-size: calc(1.325rem + 0.9vw);
@@ -11821,6 +11813,26 @@ body {
     padding: 2rem;
     font-size: 1.5rem;
 }
+.galaxy-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(circle at random, rgba(255, 255, 255, 0.2) 1%, transparent 1%);
+  background-size: 3px 3px; /* Size of the stars */
+  animation: stars 20s infinite linear;
+}
+
+@keyframes galaxy {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 10000px 10000px;
+  }
+}
 
 @media (min-width: 992px) {
     .projects-section .featured-text {
@@ -11925,19 +11937,19 @@ section {
 
 #vision
 {
-    padding: 50px 0; /* Adjust padding as needed to remove the gap */
+    padding: 150px 0; /* Adjust padding as needed to remove the gap */
 }
 
 #who-we-are {
-    padding: 250px 0; /* Adjust padding as needed to remove the gap */
+    padding: 150px 0; /* Adjust padding as needed to remove the gap */
 }
 
 #what-we-are-building {
-    padding: 250px 0; /* Adjust padding as needed to remove the gap */
+    padding: 150px 0; /* Adjust padding as needed to remove the gap */
 }
 
 #hiring {
-    padding: 250px 0; /* Adjust padding as needed to remove the gap */
+    padding: 150px 0; /* Adjust padding as needed to remove the gap */
 }
 
 hr {
@@ -11948,4 +11960,132 @@ hr {
 
 .text-center {
     text-align: center;
+}
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Noto Color Emoji;
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: black;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+body:before {
+    background-attachment: scroll;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    transform: scale(1);
+    width: 100vw;
+    z-index: 999;
+    background-image: url("../assets/image/download.svg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+header {
+  padding: 50px 0;
+}
+
+section {
+  padding: 50px 20px;
+}
+
+footer {
+  padding: 20px 0;
+}
+
+a {
+  color: var(--bs-link-color);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--bs-link-hover-color);
+}
+
+a:not([href]):not([class]),
+a:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.social {
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.social a {
+  text-align: center;
+  height: 5rem;
+  background: rgba(255, 255, 255);
+  border-radius: 100%;
+  line-height: 5rem;
+  color: rgba(255, 255, 255, 0.9);
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.social a:hover {
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.social a:active {
+  color: #fff;
+}
+
+.footer {
+  padding: 5rem 0;
+}
+.d-flex {
+  display: flex !important;
+}
+img {
+  width: 100%;
+  max-height: 60vh; /* Limit the height of images */
+  object-fit: cover; /* Ensure the images cover the allocated space */
+  margin: 20px 0;
+  z-index: 2000;
+  position: relative;
+}
+
+.py-4 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+.mx-2 {
+  margin-right: 0.5rem !important;
+  margin-left: 0.5rem !important;
+}
+
+.text-white-50 {
+  --bs-text-opacity: 1;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+@media (max-width: 768px) {
+  header,
+  section,
+  footer {
+    padding: 20px 10px;
+  }
+  .d-md-flex {
+    display: flex !important;
+  }
+  h1,
+  h2,
+  p {
+    font-size: 1.2em;
+  }
 }
